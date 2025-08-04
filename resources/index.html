@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Todo List</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/home_style.css">
+</head>
+<body>
+
+<title>Home</title>
+
+<div class="center-column">
+	<h4>John Doe</h4>
+	
+	<h5 style="color: slateblue;">Success Message</h5>
+	<form action="">
+		<input type="text" placeholder="Add Task" name="add_task" required>
+		<input class="btn btn-info" value='Add Task' type="submit">
+	</form>
+
+	<a href="{% url 'logout' %}"><input class="btn btn-info" type="button" value="Logout"></a>
+	<p>Finished Tasks: 10  |  Unfinished Tasks: 4</p>
+	
+	<div class="todo-list">
+		<div class="item-row">
+			<a class="btn btn-sm btn-info" href="#">Update</a>
+			<a class="btn btn-sm btn-danger" href="#">Delete</a>
+			Read a book
+		</div>
+		<div class="item-row">
+			<a class="btn btn-sm btn-info" href="#">Update</a>
+			<a class="btn btn-sm btn-danger" href="#">Delete</a>
+			Make a youtube video
+		</div>
+		<div class="item-row">
+			<a class="btn btn-sm btn-info" href="#">Update</a>
+			<a class="btn btn-sm btn-danger" href="#">Delete</a>
+			<strike>Wash dishes</strike>
+		</div>
+	</div>
+</div>
+</body>
+</html>
